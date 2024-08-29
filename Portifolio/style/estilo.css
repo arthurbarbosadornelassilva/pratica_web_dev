@@ -1,6 +1,23 @@
+.cabecalho {
+    background: lightblue;
+}
+.secao {
+    padding: 100px;
+}
+.subtitulo{
+    display: block;
+    background: rgb(201, 201, 207);
+    width: 500px;
+}
 #img_perfil_inicio {
+    display: flexbox;
     width: 200px;
+    height: 200px;
+    border-radius: 100%;
 }
 #img_perfil_contato {
+    display: flexbox;
     width: 200px;
+    height: 200px;
+    border-radius: 100%;
 }
