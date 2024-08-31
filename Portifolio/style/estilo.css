@@ -9,13 +9,13 @@
     background: rgb(201, 201, 207);
     width: 500px;
 }
-#img_perfil_inicio {
+#img-perfil-inicio {
     display: flexbox;
     width: 200px;
     height: 200px;
     border-radius: 100%;
 }
-#img_perfil_contato {
+#img-perfil-contato {
     display: flexbox;
     width: 200px;
     height: 200px;
