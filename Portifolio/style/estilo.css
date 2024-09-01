@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
 .cabecalho {
     background: lightblue;
 }
@@ -6,8 +8,13 @@
 }
 .subtitulo{
     display: block;
-    background: rgb(201, 201, 207);
     width: 500px;
+}
+#fonte {
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
 }
 #img-perfil-inicio {
     display: flexbox;
@@ -20,4 +27,12 @@
     width: 200px;
     height: 200px;
     border-radius: 100%;
+}
+#linkedin-svg {
+    display: inline;
+    width: 25px;
+}
+#github-svg {
+    display: inline;
+    width: 20px;
 }
