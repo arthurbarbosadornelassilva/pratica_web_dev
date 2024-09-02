@@ -1,14 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
 .cabecalho {
-    background: lightblue;
+    background: rgb(228, 225, 225);
 }
 .secao {
+    display: inline-block;
     padding: 100px;
 }
+#secao-sobre {
+    padding: 50px 100px 50px 100px;
+}
+.titulo {
+    margin: 0;
+    text-shadow: 3px 3px 1px rgb(228, 218, 218);
+}
 .subtitulo{
-    display: block;
     width: 500px;
+    margin: 0;
+    text-shadow: 3px 3px 1px rgb(228, 218, 218);
+}
+/* AQUI temos a forma correta para cortar uma imagem e colocá-la no site sem distorcê-la */
+.img {
+    display: inline-block;
+    width: 200px; /* largura da seção */
+    height: 200px; /* altura da seção */
+    background-image: url(../assets/IMG-20240512-WA0038.jpg) ;
+    background-position: center; /* Posição da seção que você quer mostrar */
+    background-size: 200px 250px; /* Tamanho total da imagem selecionada (que está de "background" na seção*/
+    border-radius: 100%;
 }
 #fonte {
     font-family: "Roboto Mono", monospace;
@@ -16,7 +35,7 @@
     font-weight: weight;
     font-style: normal;
 }
-#img-perfil-inicio {
+/* #img-perfil-inicio {
     display: flexbox;
     width: 200px;
     height: 200px;
@@ -27,7 +46,7 @@
     width: 200px;
     height: 200px;
     border-radius: 100%;
-}
+} */
 #linkedin-svg {
     display: inline;
     width: 25px;
