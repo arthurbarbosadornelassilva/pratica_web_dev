@@ -1,11 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
-.cabecalho {
-    background: rgb(228, 225, 225);
+.navbar{
+    background-color: rgb(236, 233, 233);
+    border-radius: 5px;
 }
+.link {
+    display: inline-block;
+    padding: 10px;
+    border-radius: 5px;
+    color: black;
+    text-decoration: none;
+}
+.link:hover {
+    color: white;
+    background-color: rgb(167, 163, 163);
+    text-shadow: 2px 2px 3px rgb(236, 233, 233);
+}
+
 .secao {
     display: inline-block;
-    padding: 100px;
+    padding: 50px 100px 100px 100px;
 }
 #secao-sobre {
     padding: 50px 100px 50px 100px;
@@ -27,6 +41,7 @@
     background-image: url(../assets/IMG-20240512-WA0038.jpg) ;
     background-position: center; /* Posição da seção que você quer mostrar */
     background-size: 200px 250px; /* Tamanho total da imagem selecionada (que está de "background" na seção*/
+    margin-top: 50px;
     border-radius: 100%;
 }
 #fonte {
