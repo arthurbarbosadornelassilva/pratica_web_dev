@@ -1,0 +1,28 @@
+/* Neste arquivo está a resolução de como transformar um site em responsivo apenas usando o CSS. Segue abaixo as instruções */
+@media screen and (max-width: 980px){
+    .navbar{
+        position: relative
+    }
+    .nome{
+        margin: 0;
+        text-align: center;
+    }
+    .menu{
+        display: none;
+    }
+    .manchete{
+/* margem faz com que haja certo esaçãmento da imagem que antes ficava ao lado */
+        margin: 5%;
+        text-align: center;
+    }
+    .manchete p{
+        text-align: center;
+    }
+    .catálogo{
+        width: 90%;
+        margin: 5%
+    }
+    .rodapé{
+        margin-top: 150px;
+    }
+}
