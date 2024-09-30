@@ -1,0 +1,33 @@
+.carrossel {
+    width: 300px;
+    overflow: hidden;
+}
+.images {
+    display: flex;
+    animation: slide 12s infinite;
+}
+.image {
+    min-width: 300px;
+}
+.nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    cursor: pointer;
+}
+.prev {
+    left: 10px;
+}
+.next {
+    right: 10px;
+}
+@keyframes slide {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(0); }
+    36% { transform: translateX(-300px); }
+    69% { transform: translateX(-300px); }
+    72% { transform: translateX(-600px); }
+    100% { transform: translateX(-600px); }
+}
