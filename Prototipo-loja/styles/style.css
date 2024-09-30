@@ -9,6 +9,20 @@
 .image {
     min-width: 300px;
 }
+.nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    cursor: pointer;
+}
+.prev {
+    left: 10px;
+}
+.next {
+    right: 10px;
+}
 @keyframes slide {
     0% { transform: translateX(0); }
     33% { transform: translateX(0); }
