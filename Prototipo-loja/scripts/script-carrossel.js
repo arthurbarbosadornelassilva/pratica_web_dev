@@ -6,7 +6,7 @@ let currentIndex = 0;
 //     const images = document.getElementById('images');
 //     const totalImages = document.querySelectorAll('.image').length;
 //     currentIndex = (currentIndex + direction + totalImages) % totalImages;
-//     images.style.transform = 'translateX(' + (-currentIndex * 300) + 'px)';
+//     images.style.transform = 'translateX(' + (-currentIndex * 500) + 'px)';
 // }
 
 // Script para carrossel interativo
@@ -15,7 +15,7 @@ const images = document.querySelectorAll('.image'); // Get all images
 const totalImages = images.length;
 
 function updateCarousel() {
-    const offset = currentIndex * -300; // Adjust the 300px width as per your image width
+    const offset = currentIndex * -500; // Adjust the 500px width as per your image width
     document.querySelector('.images').style.transform = `translateX(${offset}px)`;
 }
 
