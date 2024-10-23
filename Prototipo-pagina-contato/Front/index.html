@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <title> Contato </title>
+</head>
+<body onload="obterDados()">
+    <header class="row m-5">
+        <nav id="nav-bar" class="col-12 text-end  border border-black">
+            <a href="#principal"> Nome </a>
+            <a href="#secundario"> Email </a>
+            <a href="#terciario"> Mensagem </a>
+        </nav>
+    </header>
+    <div style="height: 500px" id="principal">
+        <h1> Nome: </h1>
+        <p id="paragrafo_nome"></p>
+    </div>
+    <div style="height: 500px" id="secundario">
+        <h2> E-mail: </h2>
+    </div>
+    <div style="height: 500px" id="terciario">
+        <h3> Mensagem: </h3>
+    </div>
+    <script src="scripts/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</body>
+</html>
