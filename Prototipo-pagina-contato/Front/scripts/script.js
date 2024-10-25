@@ -8,33 +8,14 @@ const contatoEndpoint = '/contato'
 
 async function obterDados() {
     const URLCompleta = `${protocolo}${baseURL}${contatoEndpoint}`;
-    const data = (await axios.get(URLCompleta)).data
-    console.log(data);
+    const dados = (await axios.get(URLCompleta)).data
+    console.log(dados);
 
     let corpoPrincipal = document.querySelector('.corpo-principal');
-    // para limpar possíveis dados indesejados do corpo principal
-    corpoPrincipal.innerHTML = '';
-
-    // let nome = corpoPrincipal.getElementsByClassName('paragrafo-nome')
-    // for (let dado of dados) {
-    //     let dadoNome = nome.insert
-    // }
-    
-    // Seleciona os elementos que exibem o primeiro item da lista de dados
-    let nomeElem = document.querySelector('.paragrafo-nome');
-    let emailElem = document.querySelector('.paragrafo-email');
-    let mensagemElem = document.querySelector('.paragrafo-mensagem');
-
+    let nome = corpoPrincipal.getElementsByClassName('paragrafo-nome')
     for (let dado of dados) {
-        // Cria elementos para cada dado
-        nomeElem.textContent = `Nome: ${dado.nome}`;
-        emailElem.textContent = `Email: ${dado.email}`;
-        mensagemElem.textContent = `Mensagem: ${dado.mensagem}`;
-
-        // Adiciona os elementos ao corpo principal
-        corpoPrincipal.appendChild(nomeElem);
-        corpoPrincipal.appendChild(emailElem);
-        corpoPrincipal.appendChild(mensagemElem);
+        let dadoNome = nome.insertRow()
+        dadoNome.innerHTML = dado.nome
     }
 }
 
