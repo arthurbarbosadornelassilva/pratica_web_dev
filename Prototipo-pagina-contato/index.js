@@ -1,8 +1,12 @@
 const express = require('express')
+const cors = require('cors')
 const app = express()
 app.use(express.json())
+app.use(cors())
 
+// criação da lógica da rota 'get', onde utilizamos a função get() com o parâmetro 'response' para coletar os dados do arquivo .json
 // get http://localhost:3000/contato
+
 app.get('/contato', (req, res) => {
     res.json(dados)
 })
