@@ -14,18 +14,21 @@
             <a href="#terciario"> Mensagem </a>
         </nav>
     </header>
-    <main class="corpo-principal">
-        <div style="height: 500px" id="principal">
+    <main>
+        <div style="height: 500px" class="col-6 m-5" id="principal">
             <h1> Nome: </h1>
-            <p class="paragrafo-nome"></p>
+            <input type="text" class="form-control mb-3" id="nomeInput" placeholder="Seu nome">
         </div>
-        <div style="height: 500px" id="secundario">
-            <h2> E-mail: </h2>;
-            <p class="paragrafo-email"></p>
+        <div style="height: 500px" class="col-6 m-5" id="secundario">
+            <h1> E-mail: </h1>
+            <input type="text" class="form-control mb-3" id="emailInput" placeholder="Seu email">
         </div>
-        <div style="height: 500px" id="terciario">
-            <h3> Mensagem: </h3>
-            <p class="paragrafo-mensagem"></p>
+        <div style="height: 300px" class="col-8 m-5" id="terciario">
+            <h1> Mensagem: </h1>
+            <input type="text" class="form-control mb-3" id="mensagemInput" placeholder="Escreva sua mensagem">
+        </div>
+        <div>
+            <button class="col-6 m-5 btn btn-outline-primary w-50 text-start" onclick="cadastrarDados()"> Enviar </button>
         </div>
     </main>
     <script src="scripts/script.js"></script>

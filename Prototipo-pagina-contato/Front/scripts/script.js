@@ -11,31 +11,27 @@ async function obterDados() {
     const data = (await axios.get(URLCompleta)).data
     console.log(data);
 
-    let corpoPrincipal = document.querySelector('.corpo-principal');
-    // para limpar possíveis dados indesejados do corpo principal
-    corpoPrincipal.innerHTML = '';
+    let principal = document.querySelector('#principal');
+    for (let dado of data) {
+        let paragrafo = document.createElement('p');
+        paragrafo.innerHTML = `Nome: ${dado.nome}`;
 
-    // let nome = corpoPrincipal.getElementsByClassName('paragrafo-nome')
-    // for (let dado of dados) {
-    //     let dadoNome = nome.insert
-    // }
-    
-    // Seleciona os elementos que exibem o primeiro item da lista de dados
-    let nomeElem = document.querySelector('.paragrafo-nome');
-    let emailElem = document.querySelector('.paragrafo-email');
-    let mensagemElem = document.querySelector('.paragrafo-mensagem');
+        principal.appendChild(paragrafo);
+    }
 
-    for (let dado of dados) {
-        // Cria elementos para cada dado
-        nomeElem.textContent = `Nome: ${dado.nome}`;
-        emailElem.textContent = `Email: ${dado.email}`;
-        mensagemElem.textContent = `Mensagem: ${dado.mensagem}`;
+    let secundario = document.querySelector('#secundario');
+    for (let dado of data) {
+        let paragrafo = document.createElement('p');
+        paragrafo.innerHTML = `Email: ${dado.email}`;
 
-        // Adiciona os elementos ao corpo principal
-        corpoPrincipal.appendChild(nomeElem);
-        corpoPrincipal.appendChild(emailElem);
-        corpoPrincipal.appendChild(mensagemElem);
+        secundario.appendChild(paragrafo);
+    }
+
+    let terciario = document.querySelector('#terciario');
+    for (let dado of data) {
+        let paragrafo = document.createElement('p');
+        paragrafo.innerHTML = `Mensagem de ${dado.nome}: ${dado.mensagem}`;
+
+        terciario.appendChild(paragrafo);
     }
 }
-
-obterDados();
