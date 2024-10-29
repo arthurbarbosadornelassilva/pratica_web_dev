@@ -47,19 +47,19 @@ async function cadastrarDados() {
     let nome = nomeInput.value;
     let email = emailInput.value;
     let mensagem = mensagemInput.value;
-    // //limpa os campos que o usuário digitou
-    // nome = ''
-    // email = ''
-    // mensagem = ''
     //envia os dados coletador pro back
     const dados = (await axios.post(URLCompleta, {nome, email, mensagem})).data
+    //limpa os campos que o usuário digitou
+    nome = ''
+    email = ''
+    mensagem = ''
 
     let principal = document.querySelector('#principal');
-    principal.innerHTML = ''
+    principal.innerHTML = '';
     for (let dado of dados) {
         let paragrafo = document.createElement('p');
         paragrafo.innerHTML = `Nome: ${dado.nome}`;
-
+        
         principal.appendChild(paragrafo);
     }
 
