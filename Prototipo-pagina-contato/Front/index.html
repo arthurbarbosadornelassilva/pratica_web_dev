@@ -15,23 +15,31 @@
         </nav>
     </header>
     <main>
-        <div style="height: 500px" class="col-6 m-5">
-            <h1> Nome: </h1>
-            <input type="text" class="form-control mb-3" id="nomeInput" placeholder="Seu nome">
-            <div id="principal"></div>
+        <div class="row justify-content-center" id="JOGO">
+            <div class="col-6 btn btn-primary">
+                <h1> Jogo Matemática no Metrô </h1>
+                <a href="jogo.html" style="color: whitesmoke"> JOGAR </a>
+            </div>
         </div>
-        <div style="height: 500px" class="col-6 m-5">
-            <h1> E-mail: </h1>
-            <input type="text" class="form-control mb-3" id="emailInput" placeholder="Seu email">
-            <div id="secundario"></div>
-        </div>
-        <div style="height: 300px" class="col-8 m-5">
-            <h1> Mensagem: </h1>
-            <input type="text" class="form-control mb-3" id="mensagemInput" placeholder="Escreva sua mensagem">
-            <div id="terciario"></div>
-        </div>
-        <div>
-            <button class="col-6 m-5 btn btn-outline-primary w-50 text-start" onclick="cadastrarDados()"> Enviar </button>
+        <div class="row" id="SAC">
+            <div style="height: 500px" class="col-6 m-5">
+                <h1> Nome: </h1>
+                <input type="text" class="form-control mb-3" id="nomeInput" placeholder="Seu nome">
+                <div id="principal"></div>
+            </div>
+            <div style="height: 500px" class="col-6 m-5">
+                <h1> E-mail: </h1>
+                <input type="text" class="form-control mb-3" id="emailInput" placeholder="Seu email">
+                <div id="secundario"></div>
+            </div>
+            <div style="height: 300px" class="col-8 m-5">
+                <h1> Mensagem: </h1>
+                <input type="text" class="form-control mb-3" id="mensagemInput" placeholder="Escreva sua mensagem">
+                <div id="terciario"></div>
+            </div>
+            <div>
+                <button class="col-6 m-5 btn btn-outline-primary w-50 text-start" onclick="cadastrarDados()"> Enviar </button>
+            </div>
         </div>
     </main>
     <script src="scripts/script.js"></script>
