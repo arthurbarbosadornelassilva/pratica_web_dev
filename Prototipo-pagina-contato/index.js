@@ -38,4 +38,16 @@ let dados = [
     }
 ]
 
+app.post("/contato", (req, res) => {
+    //obtém os dados enviados pelo cliente
+    const nome = req.body.nome
+    const email =  req.body.email
+    const mensagem = req.body.mensagem
+    //monta um objeto agrupando os dados. Ele representa um novo filme
+    const dado = {Nome: nome, Email: email, Mensagem: mensagem}
+    //adiciona o novo filme à base
+    dados.push(dado)
+    res.json(dados)
+    })
+
 app.listen(3000, () => console.log('up and running'))
