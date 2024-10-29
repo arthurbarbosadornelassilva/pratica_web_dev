@@ -44,7 +44,7 @@ app.post("/contato", (req, res) => {
     const email =  req.body.email
     const mensagem = req.body.mensagem
     //monta um objeto agrupando os dados. Ele representa um novo filme
-    const dado = {Nome: nome, Email: email, Mensagem: mensagem}
+    const dado = {nome: nome, email: email, mensagem: mensagem}
     //adiciona o novo filme à base
     dados.push(dado)
     res.json(dados)
