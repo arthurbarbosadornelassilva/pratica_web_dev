@@ -11,20 +11,12 @@ async function obterDados() {
     const dados = (await axios.get(URLCompleta)).data
     console.log(dados);
 
-<<<<<<< HEAD
     let principal = document.querySelector('#principal');
     for (let dado of data) {
         let paragrafo = document.createElement('p');
         paragrafo.innerHTML = `Nome: ${dado.nome}`;
 
         principal.appendChild(paragrafo);
-=======
-    let corpoPrincipal = document.querySelector('.corpo-principal');
-    let nome = corpoPrincipal.getElementsByClassName('paragrafo-nome')
-    for (let dado of dados) {
-        let dadoNome = nome.insertRow()
-        dadoNome.innerHTML = dado.nome
->>>>>>> 4998615a50ed638df64dc52541cf2d00da6ba01c
     }
 
     let secundario = document.querySelector('#secundario');
