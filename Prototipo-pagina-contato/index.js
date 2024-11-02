@@ -1,3 +1,5 @@
+// mongodb+srv://xarthsilvax:12345@cluster0.abfit.mongodb.net/test?retryWrites=true&w=majority&appName=Cluster0
+
 const express = require('express')
 const cors = require('cors')
 const app = express()
