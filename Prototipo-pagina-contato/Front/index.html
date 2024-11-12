@@ -7,12 +7,27 @@
     <title> Contato </title>
 </head>
 <body onload="obterDados()">
-    <header class="row m-5">
-        <nav id="nav-bar" class="col-12 text-end  border border-black">
-            <a href="#principal"> Nome </a>
-            <a href="#secundario"> Email </a>
-            <a href="#terciario"> Mensagem </a>
-        </nav>
+    <header class="container-flex mb-5">
+        <div class="row justify-content-start border border-black">
+            <a href="#principal" class="col"> Nome </a>
+            <a href="#secundario" class="col"> Email </a>
+            <a href="#terciario" class="col"> Mensagem </a>
+        </div>
+        <div class="row justify-content-center border border-principal">
+            <div class="col-md-8">
+                <nav class="navbar navbar-expand-md bg-light">
+                    <a class="navbar-brand" href="#"> Pagina Contato </a>
+                    <button class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#myNav"
+                        aria-controls="myNav" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </nav>
+            </div>
+        </div>
     </header>
     <main>
         <div class="row justify-content-center" id="JOGO">
