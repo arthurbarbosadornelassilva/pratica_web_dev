@@ -22,7 +22,7 @@ const usuarioSchema = mongoose.Schema({
     password: { type: String, required: true }
 })
 usuarioSchema.plugin(uniqueValidator)
-const Usuario = mongoose.model(`Usuario`, usuarioSchema)
+const CADASTRADO = mongoose.model(`CADASTRADO`, usuarioSchema)
 
 async function contatarAoMongoDB() {
     await mongoose.connect(`mongodb+srv://xarthsilvax:12345@cluster0.abfit.mongodb.net/test?retryWrites=true&w=majority&appName=Cluster0`)
@@ -76,7 +76,7 @@ app.post('/signup', async (req, res) => {
         const login = req.body.login
         const password = req.body.password
         const criptografada = await bcrypt.hash(password, 10)
-        const usuario = new Usuario({
+        const usuario = new CADASTRADO({
             login: login,
             password: criptografada
         })
@@ -95,9 +95,9 @@ app.post('/login', async (req, res) => {
     const login = req.body.login
     const password = req.body.password
     //tentamos encontrar no MongoDB
-    const u = await Usuario.findOne({ login: req.body.login })
+    const u = await CADASTRADO.findOne({ login: req.body.login })
     if (!u) {
-        //senão foi encontrado, encerra por aqui com código 401
+        //se não foi encontrado, encerra por aqui com código 401
         return res.status(401).json({ mensagem: "login inválido" })
     }
     //se foi encontrado, comparamos a senha, após descriptográ-la
